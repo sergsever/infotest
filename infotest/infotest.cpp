@@ -32,7 +32,7 @@
 			if (!requests->empty())
 			{
 				Request* request = requests->front();
-				std::cout << "process a request\n";
+				std::cout << "process a request by " << std::this_thread::get_id() << std::endl;
 				std::this_thread::sleep_for(std::chrono::seconds(1));
 			}
 			lock.unlock();
